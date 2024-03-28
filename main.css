@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #242424;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-block: auto;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
+  color: #334650;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+p {
+  margin-block: auto;
+  line-height: 24px;
+  color: #334650;
+}
+
+ul.technologies {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+ul.technologies li {
+  position: relative;
+  list-style-type: none;
+  height: 16px;
+}
+ul.technologies li:before {
+  content: attr(data-text);
+  position: absolute;
+  top: -22px;
+  left: calc(-100% - 8px);
+  padding: 0px 4px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  display: none;
+}
+ul.technologies li:hover:before {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #334650;
+  border-radius: 4px;
+  padding: 4px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  background: #334650;
+}
+.button:hover {
+  background: #fff;
+  color: #334650;
+}

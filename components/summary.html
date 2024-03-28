@@ -1,0 +1,101 @@
+<style>
+.avatar {
+  position: relative;
+}
+
+.avatar img {
+  display: block;
+  width: 100%;
+  max-width: 254px;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .avatar img {
+    max-width: 164px;
+  }
+}
+
+.details{
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: 8px 0px;
+  padding: 0px;
+  list-style: none;
+  line-height: 16px;
+  font-size: 12px;
+  border-top: 1px solid #E5E7EA;
+  border-bottom: 1px solid #E5E7EA;
+}
+.details li:first-child{
+  padding-left: 0px;
+}
+.details li:not(:first-child){
+  border-left: 1px solid #E5E7EA;
+}
+.details li{
+  padding: 12px;
+}
+.details li p{
+  line-height: 16px;
+  color: #586375;
+}
+.details li h3{
+  font-weight: 400;
+}
+.hr{
+  border: none;
+  border-bottom: 1px solid #E5E7EA;
+  margin: 12px 0px;
+}
+
+@media only screen and (max-width: 680px) {
+  .details {
+    flex-direction: column;
+  }
+  .details li{
+    border-left: none !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .details li:not(:last-child){
+    border-bottom: 1px solid #E5E7EA;
+  }
+}
+</style>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="avatar">
+      <img src="/assets/avatar.webp" />
+    </div>
+  </div>
+  <div class="col-lg-9">
+    <h1>Rafael Stepan</h1>
+    <p>Software Engineer</p>
+    
+    <ul class="details">
+      <li>
+        <p>Location</p>
+        <h3>Arad, Romania</h3>
+      </li>
+      <li>
+        <p>Languages</p>
+        <h3>Romanian, English</h3>
+      </li>
+      <li>
+        <p>Contact</p>
+        <h3>stepanrafael@setupkit.com</h3>
+      </li>
+    </ul>
+    
+    <p class="description">
+      I am a technical professional with a proven track record of delivering full-stack software solutions since 2016.
+      I've worked on a range of products and clients, from tackling legacy projects to spearheading the launch of new applications for startups.
+      I've also founded an online web design agency and launched my own startup focused on team collaboration.
+      Most of my work consists of translating concepts into actionable development plans, designing software architecture, <span style="white-space: nowrap;">user-interfaces</span>, and effective development.
+    </p>
+  </div>
+</div>

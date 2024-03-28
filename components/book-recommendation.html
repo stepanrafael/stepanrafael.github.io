@@ -1,0 +1,66 @@
+<style>
+ul.recommendations{
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+ul.recommendations li{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 50%;
+  padding: 12px 6px;
+  border-bottom: 1px solid #E5E7EA;
+}
+ul.recommendations li div div:first-child{
+  font-weight: 500;
+  color: #334650;
+}
+ul.recommendations li div div:last-child{
+  color: #334650;
+}
+</style>
+
+<h1>Book Recommendations</h1>
+<ul class="recommendations">
+  <li>
+    <img src="/assets/book.webp" />
+    <div>
+      <div>Fundamentals of Software Architecture</div>
+      <div>by Mark Richards & Neal Ford</div>
+    </div>
+  </li>
+  <li>
+    <img src="/assets/book.webp" />
+    <div>
+      <div>You don't know JS</div>
+      <div>by Kyle Simpson</div>
+    </div>
+  </li>
+  <li>
+    <img src="/assets/book.webp" />
+    <div>
+      <div>Refactoring</div>
+      <div>by Martin Fowler</div>
+    </div>
+  </li>
+  <li>
+    <img src="/assets/book.webp" />
+    <div>
+      <div>Designing Data-Intensive Applications</div>
+      <div>by Martin Kleppmann</div>
+    </div>
+  </li>
+  <li style="border-bottom: none;">
+    <img src="/assets/book.webp" />
+    <div>
+      <div>Design Patterns</div>
+      <div>by Gang of Four</div>
+    </div>
+  </li>
+</ul>

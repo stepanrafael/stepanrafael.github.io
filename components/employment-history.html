@@ -1,0 +1,238 @@
+<style>
+ul.jobs {
+  position: relative;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+ul.jobs li.job {
+  list-style: none;
+  border-left: 1px dashed #3943B7;
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 36px;
+  margin-left: 6px;
+}
+ul.jobs li.job:last-child {
+  border: 0px;
+}
+ul.jobs li.job:before {
+  content: "";
+  min-width: 18px;
+  min-height: 18px;
+  background: #3943B7;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 0px;
+}
+
+ul.jobs li.job .title {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+ul.jobs li.job .title p{
+  line-height: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #979BA6;
+}
+ul.jobs li.job p.subtitle{
+  line-height: 20px;
+}
+ul.jobs li.job .description{
+  padding-top: 12px;
+  color: #586375 !important;
+}
+ul.jobs li.job .description ul{
+  list-style: disc;
+  padding-left: 24px;
+  margin-top: 4px;
+}
+ul.jobs li.job .description ul li:not(:last-child){
+  margin-bottom: 4px;
+}
+ul.jobs li.job .technologies{
+  display: block;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 768px) {
+  ul.jobs li.job{
+    padding-left: 16px;
+  }
+}
+</style>
+
+<h1 style="margin: 12px 0px;">Work Experience</h1>
+
+<ul class="jobs"></ul>
+
+<script>
+const data = [
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "Accesa - Romania, Cluj-Napoca",
+    "duration": "September 2023 — Present",
+    "description": "Accesa.eu allowed me to work for a well-known company in the banking area. <ul> <li> Being part of a team, I actively contributed to strategic discussions to ensure alignment. </li> <li> Continuous development of interactive widgets for banking clients. </li> <li> Gathered informations about the data and designed numerous widgets. </li> <li> Translated interface designs into seamless user experiences. </li> </ul>",
+    "technologies": "Javascript, Typescript, Angular, Figma, RxJS, NgRx, Nx, Jest, Jenkins, Git"
+  },
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "Syntegon - Switzerland, Zürich",
+    "duration": "January 2023 — June 2023",
+    "description": "Synexio IoT Dashboard - Provides solutions for evaluating and visualizing machine data - both historically and in real time. Customers minimize the negative effects on the environment by minimizing product waste, electricity, water or air consumption. Nominated for UX Design Awards 2023.<br> <ul> <li> Being part of a team, I actively contributed to strategic discussions to ensure alignment. </li> <li> Developed interactive charts using D3 based on the provided Figma designs. The charts display real-time or historical insights using the factory's machine data. </li> <li> Implemented solutions for complex features such as machine power consumption, machine utilization level, production timeline and reporting system. </li> <li>Updated the filtering system with new features and a better system performance.</li><li> Resolved general issues and translated miscellaneous interface designs into seamless user experiences. </li> </ul>",
+    "technologies": "Javascript, Typescript, Angular, RxJS, NgRx, D3, Git"
+  },
+  {
+    "title": "Full-Stack Engineering",
+    "subtitle": "Veonia - Florida, Miami",
+    "duration": "April 2020 — July 2022",
+    "description": "NetSheet - Software as a service, helping realtors and brokerages generate estimates and capture leads.<br> <ul> <li> Being the main developer on the project, I contributed to the system architecture and development, supervised by the team lead and technical lead from other projects. </li> <li> Translated Figma designs into functional system interface. </li> <li> Migrated the database to the new structure I designed. </li> <li> Built back-end APIs from scratch, applying security methods and optimal strategies. </li> <li> Developed an administration portal, upgrading it from Angular 1.6 to Angular Typescript using Angular Material as UI library. </li> <li> Accomplished third-party integrations with Remax, Keller Williams, Stripe, eCommission, Sentry and Mixpanel. </li> </ul>",
+    "technologies": "Javascript, Typescript, Angular, Node.js, Express.js, MySQL, Docker, Jenkins, Git"
+  },
+  {
+    "title": "Part-Time Front-End Engineering",
+    "subtitle": "Inombra - United Kingdom",
+    "duration": "January 2022 — Present",
+    "description": "Logistics system designed for in-house use to manage customers, orders, quotes, and more. <ul> <li> Being the single developer on the front-end, I spearheaded the creation of a large-scale logistics application tailored to the management of window shades and blinds.  </li> <li> Designed the entire front-end architecture, translating complex concepts into intuitive user interfaces. </li> <li> Developed various functionalities for managing customers, orders, workflows, invoices, fabrics and suppliers, events and more. </li> <li> My hands-on involvement ensured a visually appealing user experience, while my proactive collaboration with internal stakeholders facilitated the alignment of technical solutions with business needs. </li> </ul>",
+    "technologies": "Javascript, Typescript, Angular, RxJS, NgZorro, Syncfusion, Figma, Git"
+  },
+  {
+    "title": "Part-Time Front-End Engineering",
+    "subtitle": "Modpack - United Kingdom",
+    "duration": "April 2021 — September 2021",
+    "description": "Modpack is a global leader in providing fully integrated logistics and industrial machinery relocation solutions. <ul> <li> My role was to continue the development of the front-end with Angular, improving existing functionality and implementing new features. </li> <li> Translated Figma designs into functional interfaces. </li> </ul>",
+    "technologies": "Javascript, Typescript, Angular, RxJS, NgZorro, Figma, Git"
+  },
+  {
+    "title": "Full-Stack Engineering",
+    "subtitle": "Spin-off Intelligence - Germany, Berlin",
+    "duration": "May 2019 — February 2020",
+    "description": "Spin-off Intelligence is a platform for finding business information about private and public companies. Spin-off Intelligence includes information on investments and financing, founding members and individuals in management positions, mergers and acquisitions but also many more insights.<br><br> My role encompassed a large spectrum of responsibilities, from architectural design and data management to creating an engaging user interface and implementing innovative features, collaborating directly with the stakeholders in Berlin and Prague to ensure a streamlined development process.<br> <ul> <li> Designed a scalable, efficient, and reliable platform architecture. </li> <li> Implemented Orient Graph Database in a network-like structure consisting of vertices and edges for efficient data storage and retrieval. </li> <li> Designed an intuitive and visually appealing interface for an enhanced user experience. </li> <li> Developed multiple data visualizations, including charts and graphs (such as financial history, funds per round, patent types, technology fields and 10+ others), which aid users in better understanding of complex information. </li> <li> Designed an interactive networking graph with advanced search functionality, allowing users to find the shortest or best path between nodes, with additional filters. </li> <li> Engineered an administration panel for seamless data management, importing, user roles, and subscription tracking. </li> <li> Implemented seamless transactions using the PayPal API. </li> <li> Designed and developed a sleek presentation website showcasing Spin-off Intelligence's capabilities. </li> </ul>",
+    "technologies": "Javascript, Angular.js, Node.js, Express.js, OrientDB, Sigma.js, Gulp.js, PayPal API, Photoshop, Git, NGINX, ESXi"
+  },
+  {
+    "title": "Full-Stack Engineering",
+    "subtitle": "Agrostoc - Romania, Arad",
+    "duration": "2020 — 2020",
+    "description": "My role at Agrostoc encompassed the end-to-end development of an online shopping website created for a local agricultural business. <ul> <li> Led the entire project lifecycle, from concept to execution, ensuring a functional online shopping platform. </li> <li> Developed an administration portal using Node.js and Angular.js, providing efficient management and control over the website's backend operations. </li> </ul>",
+    "technologies": "PHP, Javascript, Angular.js, Node.js, Express.js, Git"
+  },
+  {
+    "title": "Full-Stack Engineering",
+    "subtitle": "EverestBikeShop - Romania, Arad",
+    "duration": "2019 — 2019",
+    "description": "During my tenure at EverestBikeShop, I undertook the complete development of an online shopping website tailored for a local business specializing in bicycles, skis, and related components. As the driving force behind the project, I assumed leadership across the entire project lifecycle, ensuring the creation of a fully functional and user-friendly online shopping platform. <ul> <li> Led the entire project lifecycle, from concept to execution, ensuring a functional online shopping platform. </li> <li> Developed an administration portal using Node.js and Angular.js, providing efficient management and control over the website's backend operations. </li> </ul>",
+    "technologies": "PHP, Javascript, Angular.js, Node.js, Express.js, Git"
+  },
+  {
+    "title": "Founder",
+    "subtitle": "Setupkit",
+    "duration": "2017 — 2019",
+    "description": "My vision was to create a SaaS for team collaboration that includes all the needed features in one platform. Setupkit includes a built-in chat, kanban board, project management tool, forums, time tracker, and other features. My activities as founder of Setupkit included not only strategic and managerial aspects, but also hands-on contributions in designing the platform's architecture, database, front-end and back-end. <ul> <li> Extensive research into business models, requirements and technologies to ensure Setupkit was perfectly aligned with business needs and market demands. </li> <li> Participated in the architectural design of the entire platform, covering database, front-end, and back-end components. This involved selecting technologies that would optimize functionality and user experience. </li> <li> Balancing management duties with hands-on design responsibilities, I meticulously designed every aspect of the platform using, ensuring attention to detail in both features and user interface. </li> <li> Built the APIs that powered the platform, incorporating both HTTP and WS protocols to ensure seamless communication and real-time capabilities of all the platform requests and events. </li> <li> Designed the infrastructure in ESXI to separate each process into a dedicated environment. </li> <li> Actively participated in presentations and meetings with potential investors, showcasing the vision and potential of Setupkit. </li> <li> Dedicated research and strategic marketing initiatives to ensure visibility and relevance of the platform in the marketplace. </li> </ul>",
+    "technologies": "Javascript, Angular.js, Node.js, Express.js, Socket.IO, MySQL, Redis, Webpack, Gulp, Git, Linux, Windows Server, ESXi, NGINX, Adobe Creative Suite"
+  },
+  {
+    "title": "Full-Stack Engineering",
+    "subtitle": "Upick - Hong Kong",
+    "duration": "2018 — 2019",
+    "description": "Upick’s system runs algorithms to combine your RIASEC codes, Interest Codes and your expected DSE results, and compare them with further study programmes to recommend tertiary education options. <ul> <li> Designed and developed the entire system, ensuring a cohesive and effective integration of algorithmic processes. </li> <li> Engineered an administration portal, offering efficient control and management of the system's functionalities. </li> <li> Designed and developed a captivating presentation website, providing users with an insightful overview of Upick's capabilities. </li> </ul>",
+    "technologies": "Javascript, Angular.js, Node.js, Express.js, MySQL, Git, NGINX, ESXi"
+  },
+  {
+    "title": "Full-Stack Engineering",
+    "subtitle": "SeeQchat - Hong Kong",
+    "duration": "2018 — 2019",
+    "description": "As the driving force behind SeeQchat's innovative platform, I orchestrated the design and development of a comprehensive system offering career coaching and resume writing services directly from professionals. The platform provides these services seamlessly through its real-time messaging app or public forums. <ul> <li> Designed and developed the entire system, aligning every aspect with the vision and needs of the stakeholders. </li> <li> Engineered a messaging tool using Socket.IO and WS protocol, ensuring real-time communication between users and professionals. </li> <li> Designed an online forum accessible to the public without requiring an account. The forum allows users to read, write, open new topics, and engage with other posts through replies and likes. </li> <li> Designed a presentation website, serving as a gateway for users to explore SeeQchat's services and features. </li> </ul>",
+    "technologies": "Javascript, Angular.js, Node.js, Express.js, MySQL, Socket.IO, Git, NGINX, ESXi"
+  },
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "Cloudvoid",
+    "duration": "2019 — 2019",
+    "description": "As a Front-End Engineer at Couldvoid, I had the opportunity to contribute to a startup project focused on IT Infrastructure Automation. During the project, I collaborated closely with stakeholders in New York and Israel to ensure that the results delivered were aligned with their expectations. Despite the project's relatively short duration due to some back-end development complications, I was able to successfully design and develop the front-end pages along with some basic features.",
+    "technologies": "Javascript, Angular.js, Git"
+  },
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "Equeum",
+    "duration": "2018 — 2018",
+    "description": "At Equeum, a start-up project in the financial industry, I was tasked with the development of charts using the Highcharts.js library. These charts were seamlessly integrated into custom widgets, which were part of Equeum's proprietary library built upon jqWidgets. <ul> <li> Utilized the Highcharts.js library to craft informative charts, aligning them seamlessly with Equeum's financial platform. </li> <li> Integrated the developed charts into custom widgets, enhancing the overall functionality and user experience of Equeum's platform. </li> <li> Reported and tested the functionality of existing widgets provided by Equeum's library, ensuring a smooth and error-free user experience. </li> <li> Contributed suggestions for easing the guidance provided in Equeum's glossary, aiming to enhance user understanding and interaction with the financial platform. </li> </ul>",
+    "technologies": "Javascript, Angular.js"
+  },
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "SimonSaysAI",
+    "duration": "2018 — 2018",
+    "description": "SimonSaysAI is an AI Transcription Software. Initially hired me to rebuild the project in Angular.js, providing a comparative analysis of performance against the existing framework. I was also tasked with kickstarting the design and development of a new front-end project named Cite. This project, simillar to YouTube, involved creating an engaging user interface with dummy data to simulate the platform's functionality. My journey at SimonSaysAI continued with the creation of an Adobe Premiere Pro plugin.",
+    "technologies": "Javascript, Angular.js, Adobe Premiere Pro, Git"
+  },
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "StreamBrightData",
+    "duration": "2017 — 2017",
+    "description": "During my time at StreamBrightData, I contributed to the development of SeeFashion, a project designed to showcase various metrics and dashboards related to Shopify accounts. <ul> <li> As the only Front-End Engineer, I initiated and designed the front-end project. </li> <li> Contributed to the creation of dynamic dashboards utilizing tools such as D3, Mapbox, and Chart.JS. </li> <li> UI/UX design, utilizing tools like Photoshop, HTML & CSS, and Bootstrap to enhance the visual appeal and user experience. </li> </ul>",
+    "technologies": "Javascript, Angular.js, Photoshop, D3, Mapbox, Webpack, Git"
+  },
+  {
+    "title": "Front-End Engineering",
+    "subtitle": "ZetaSafe - United Kingdom",
+    "duration": "2016 — 2017",
+    "description": "With ZetaSafe you can track and manage compliance obligations with ease and accuracy. Increased control over data, costs, labor and processes. <ul> <li> As part of a team, I had to attend daily meetings to ensure alignment. </li> <li> Enhanced the overall look and feel of the platform. </li> <li> Engaged in general development activities, contributing to the platform's functionality, reliability, and overall performance. </li> <li> Chart development using Highcharts.js. </li> </ul>",
+    "technologies": "Javascript, Angular.js, HightCharts.js, Gulp, Webpack, Git, Photoshop"
+  },
+  {
+    "title": "Founder",
+    "subtitle": "SublimeSpectrum",
+    "duration": "2014 — 2016",
+    "description": "SublimeSpectrum was an online agency that provided a range of digital services, including logo design, graphic design, web design, promotional videos, promotional images, and web development. While working at SublimeSpectrum, I designed logos and developed presentation websites for industries such as travel, consulting, recruitment, and software as a service.",
+    "technologies": "PHP, Javascript, Adobe Creative Suite"
+  }
+];
+
+// Get the container element
+const jobsList = document.querySelector('.jobs');
+
+// Iterate over the data array and generate HTML for each job
+data.forEach(obj => {
+  // Create elements for job information
+  const li = document.createElement('li');
+  li.classList.add('job');
+
+  const titleDiv = document.createElement('div');
+  titleDiv.classList.add('title');
+
+  const titleHeading = document.createElement('h3');
+  titleHeading.textContent = obj.title;
+
+  const titleDuration = document.createElement('p');
+  titleDuration.textContent = obj.duration;
+
+  const subtitle = document.createElement('p');
+  subtitle.classList.add('subtitle');
+  subtitle.textContent = obj.subtitle;
+
+  const descriptionDiv = document.createElement('div');
+  descriptionDiv.classList.add('description');
+  descriptionDiv.innerHTML = obj.description;
+
+  const technologiesSmall = document.createElement('small');
+  technologiesSmall.classList.add('technologies');
+  technologiesSmall.textContent = 'Technologies: ' + obj.technologies;
+
+  // Append elements to their respective parent elements
+  titleDiv.appendChild(titleHeading);
+  titleDiv.appendChild(titleDuration);
+
+  descriptionDiv.appendChild(technologiesSmall);
+
+  li.appendChild(titleDiv);
+  li.appendChild(subtitle);
+  li.appendChild(descriptionDiv);
+
+  // Append the job element to the jobs list
+  jobsList.appendChild(li);
+});
+</script>
